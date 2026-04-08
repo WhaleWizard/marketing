@@ -1,1 +1,46 @@
+/* Базовые стили */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#0b0b0f; color:#fff; line-height:1.6; }
+.container { width:90%; max-width:1200px; margin:0 auto; }
 
+/* Navbar */
+.navbar { position:sticky; top:0; backdrop-filter:blur(15px); background:rgba(11,11,15,0.85); padding:1rem 0; z-index:100; display:flex; justify-content:space-between; align-items:center; }
+.navbar .logo { font-weight:700; font-size:1.5rem; color:#a68fff; }
+.navbar ul { display:flex; list-style:none; gap:2rem; }
+.navbar a { text-decoration:none; color:#fff; transition:0.3s; }
+.navbar a:hover { color:#a68fff; }
+.btn-cta { background:#a68fff; border:none; padding:.5rem 1rem; border-radius:5px; color:#fff; cursor:pointer; transition:0.3s; }
+.btn-cta:hover { background:#7c4fff; }
+
+/* Hero */
+.hero { display:flex; align-items:center; justify-content:center; text-align:center; height:100vh; background:linear-gradient(135deg,#0b0b0f,#1a0a2a); }
+.hero h1 { font-size:3rem; color:#a68fff; }
+.hero p { margin:1rem 0; font-size:1.2rem; }
+.btn-primary { background:#7c4fff; color:#fff; padding:.8rem 1.5rem; border-radius:8px; text-decoration:none; display:inline-block; transition:.3s; }
+.btn-primary:hover { background:#5b2fff; }
+
+/* Секции */
+section { padding:5rem 0; }
+
+/* Карточки услуг */
+.cards { display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; }
+.card { background:rgba(255,255,255,0.05); padding:2rem; border-radius:15px; width:300px; text-align:center; transition:.3s; }
+.card:hover { background:rgba(255,255,255,0.15); }
+
+/* Кейсы */
+.case-cards { display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center; }
+.case-card { background:rgba(255,255,255,0.05); border-radius:15px; overflow:hidden; width:280px; text-align:center; }
+.case-card img { width:100%; display:block; }
+.case-card p { padding:1rem; }
+
+/* Контакты */
+.contact form { display:flex; flex-direction:column; gap:1rem; max-width:500px; margin:0 auto; }
+.contact input, .contact textarea { padding:.8rem; border-radius:8px; border:none; background:rgba(255,255,255,0.1); color:#fff; }
+.contact input::placeholder, .contact textarea::placeholder { color:#bbb; }
+.contact button { align-self:flex-end; }
+
+/* Footer */
+.footer { text-align:center; padding:2rem 0; background:rgba(11,11,15,0.9); color:#777; }
+
+/* Адаптив */
+@media (max-width:768px) { .cards, .case-cards { flex-direction:column; gap:1rem; } .navbar ul { display:none; } }
